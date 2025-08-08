@@ -62,7 +62,7 @@ if (SessionManager::has('admin_logged_in')) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Administrativo -   LWFA</title>
+    <title>Login Administrativo - Sistema de Recrutamento</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -211,68 +211,56 @@ if (SessionManager::has('admin_logged_in')) {
 
         .logo-section {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo-admin {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center;
             box-shadow: 
-                0 15px 35px rgba(30, 60, 114, 0.4),
-                0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 4px solid rgba(255, 255, 255, 0.8);
+                0 20px 40px rgba(30, 60, 114, 0.3),
+                0 10px 20px rgba(0, 0, 0, 0.1),
+                inset 0 0 0 4px rgba(255, 255, 255, 0.9);
+            border: 6px solid transparent;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa) padding-box,
+                        linear-gradient(135deg, #1e3c72, #2a5298, #34609b) border-box;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .logo-admin:hover {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.08) translateY(-3px);
             box-shadow: 
-                0 20px 45px rgba(30, 60, 114, 0.5),
-                0 10px 25px rgba(0, 0, 0, 0.15);
+                0 25px 50px rgba(30, 60, 114, 0.4),
+                0 15px 30px rgba(0, 0, 0, 0.15),
+                inset 0 0 0 4px rgba(255, 255, 255, 1);
+            filter: brightness(1.1);
         }
 
-        .logo-admin::after {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
-            border: 2px solid transparent;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1e3c72, #2a5298) border-box;
-            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .logo-admin:hover::after {
-            opacity: 1;
-        }
-
-        .logo-section h1 {
-            color: #1e3c72;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .logo-section p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .logo-section p {
-            color: #666;
-            font-size: 1rem;
-            font-weight: 500;
-            opacity: 0.8;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -559,7 +547,7 @@ if (SessionManager::has('admin_logged_in')) {
                 <div class="space-y-2">
                     <h3 class="text-lg font-bold text-blue-400 mb-2 flex items-center">
                         <i class="fas fa-briefcase mr-2"></i>
-                        LWFA
+                        Sistema de Recrutamento
                     </h3>
                     <p class="text-gray-300 leading-relaxed text-xs">
                         Conectando talentos com oportunidades desde 2025.
@@ -621,7 +609,7 @@ if (SessionManager::has('admin_logged_in')) {
                     <div class="space-y-1">
                         <div class="flex items-center text-gray-300 text-xs">
                             <i class="fas fa-envelope mr-2 text-blue-400 w-3"></i>
-                            <span>contato@LWFA.com</span>
+                            <span>contato@sistemarecrutamento.com</span>
                         </div>
                         <div class="flex items-center text-gray-300 text-xs">
                             <i class="fas fa-phone mr-2 text-blue-400 w-3"></i>
@@ -639,7 +627,7 @@ if (SessionManager::has('admin_logged_in')) {
             <div class="border-t border-gray-700 pt-3">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="text-gray-400 text-xs mb-2 md:mb-0">
-                        © 2025 <span class="text-blue-400 font-semibold">LWFA</span> — Todos os direitos reservados.
+                        © 2025 <span class="text-blue-400 font-semibold">Sistema de Recrutamento</span> — Todos os direitos reservados.
                     </div>
                     <div class="text-gray-400 text-xs flex items-center">
                         Desenvolvido com <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> para conectar pessoas
